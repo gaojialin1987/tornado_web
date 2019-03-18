@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if name %}
+    <h2>尊敬的用户{{name}}，欢迎访问系统</h2>
+    {% else %}
+    <h2>请先登录</h2>
+    {% end %}
+
+<h1>GET方式传递数据</h1>
+<a href="/param_get1/?name=Tom">超链接传递GET数据</a>
+
+<form action="/param_get2/" method="GET">
+    name: <input type="text" name="name" id="name"><br/>
+    <input type="submit" value="表单方式传递GET数据"><br/>
+</form>
+
+<h1>POST方式传递数据</h1>
+<form action="/param_post/" method="POST">
+    name: <input type="text" name="name" id="name2"><br/>
+    <input type="submit" value="表单方式传递POST数据"><br/>
+</form>
+
+<h1>RESTful方式传递数据</h1>
+<a href="/param_rest/10/">查询个人信息RESTful方式</a>
+{% end %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}模板{% end %}</title>
+    <!--<link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="{{static_url('css/index.css')}}">
+</head>
+<body>
+<h1>这是{{ name }}的个人博客</h1>
+<img src="/static/images/test2.jpg" alt="">
+{% block content %}
+<h2>模板中展示内容的部分</h2>
+{% end %}
+</body>
+</html>
